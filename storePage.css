@@ -1,0 +1,157 @@
+.itemContainer{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: orangered;
+    border-radius: 10px;
+    width: 95%;
+}
+
+.itemCard{
+    margin: 8px auto;
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 5px;
+    background-color: navy;
+    border-radius: 10px;
+    width: 280px;
+}
+
+/* .itemCard:hover{
+    background-color: whitesmoke;
+    border: 5px groove navy;
+} */
+
+.itemImageDiv{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 10px auto;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.itemCard:hover .itemImageDiv{
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+.itemImage{
+    height: 200px;
+    width: 200px;
+    transition: 0.5s ease-in-out;
+}
+
+.itemCard:hover .itemImage{
+    transform: scale(1.3);
+}
+
+.wishList{
+    position: absolute;
+    display: block;
+    margin: 3px;
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.itemDescription{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: white;
+    margin: 10px;
+    font-size: larger;
+    line-height: 30px;
+    border-radius: 10px;
+    width: auto;
+    padding: 10px;
+}
+
+.itemName{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.itemPrice{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 20px;
+    color: navy;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fa{
+    font-size: large;
+    padding: 6px;
+}
+
+.fa-heart, .fa-heart-o{
+    color: red;
+}
+
+.cart, .buyNow{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #3F51B5;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
+
+.buyNow{
+    grid-column-start: 3;
+    background-color: #8B008B;
+    grid-column-end: 4;
+}
+
+.cartText, .buyText{
+    font-size: 18px;
+    font-weight: normal;
+}
+  
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+  
+.tooltip .tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}

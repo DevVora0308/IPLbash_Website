@@ -1,0 +1,79 @@
+
+.tabLink {
+    background-color: navy;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 33.33%;
+    font-weight: bold;
+  }
+  
+.tabLink:hover {
+    background-color: rgb(40, 40, 139);
+}
+
+.tabContent {
+    color: navy;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+  
+
+.activeTabContent {
+    background-color: orange;
+}
+
+.userTables {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.userTables td, .userTables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.userTables tr:nth-child(even){
+    background-color: rgba(255, 68, 0, 0.61);
+}
+
+.userTables tr:nth-child(odd){
+    background-color: rgba(255, 68, 0, 0.61);
+}
+
+.userTables tr:hover {
+    background-color: orangered;
+}
+
+.userTables td .deleteBtn{
+    background-color: red;
+    color: navy;
+    padding: 3px;
+    font-size: 20px;
+    border: 1px solid navy;
+}
+
+.userTables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: navy;
+    color: white;
+}
+
+.userTables tr:hover .deleteBtn{
+    background-color: white;
+    color: red;
+}
+
+.deleteBtn a:link, .deleteBtn a:visited{
+    color: inherit;
+}
+

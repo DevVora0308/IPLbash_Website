@@ -1,0 +1,335 @@
+* {box-sizing:border-box}
+
+body{
+    margin: 10px auto;
+    background-color: navy;
+}
+
+.mainContainer{
+    display: grid;
+    margin: 0px 10px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+}
+
+.matchHistory, .productList, .latestNews{
+    grid-column: 1/3;
+    background-color: orangered;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.matchHistoryHeading,.productListHeading, .latestNewsHeading{
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    font-weight: bolder;
+}
+
+.prevMatch, .productCard{
+    width: 40%;
+    counter-increment: prevMatch;
+    background: orange;
+    margin-left: 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: navy;
+    font-size: 18px;
+    filter: blur(3px);
+}
+
+.prevMatch.is-selected, .productCard.is-selected{
+    background: whitesmoke;
+    filter: blur(0px);
+}
+
+/* cell number */
+.prevMatch:before, .productCard:before{
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    color: orangered;
+}
+
+.flickity-prev-next-button{
+    top: 50%;
+}
+
+.flickity-prev-next-button.previous{
+    top: 72%;
+    border-radius: 50%;
+    margin: -50px 0px 0px;
+}
+
+.flickity-prev-next-button.next {
+    top: 72%;
+    border-radius: 50%;
+}
+
+.flickity-page-dots{
+    display: none;
+}
+
+.teamNo{
+    grid-column: 1/2;
+    padding: 5px;
+}
+
+.matchDate{
+    grid-column: 3/4;
+    padding: 5px;
+}
+
+.teamDetails{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 5px;
+}
+
+.team1, .team2{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.team1 teamLogo, .team1 teamName, .team1 score{
+    display: inline;
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.teamDetails .vs{
+    display: inline;
+    grid-column: 2/3;
+    text-align: center;
+    font-weight: bold;
+}
+
+.team2 teamLogo, .team2 teamName, .team2 score{
+    display: inline;
+    grid-column: 3/4;
+    text-align: center;
+}
+
+.teamLogo{
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.teamName{
+    grid-row: 2/3;
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+.score{
+    grid-row: 3/4;
+}
+
+.winDetails{
+    grid-column: 1/4;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    background-color: navy;
+    color: white;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.productList{
+    grid-column: 1/3;
+    background-color: orangered;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.productContainer{
+    margin: 0 auto;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+.productCard{
+    counter-increment: productCard;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    background-color: whitesmoke;
+    height: 200px;
+    width: 30%;
+    transition: 0.5s ease-in-out;
+}
+
+.productCard.is-selected{
+    background: navy;
+    color: white;
+}
+
+.productDescriptionDiv{
+    grid-row: 1/5;
+    grid-column: 1/2;
+    background-color: whitesmoke;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.wishList{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.wishList > .fa{
+    font-size: large;
+    padding: 6px;
+}
+
+.productCard.is-selected:hover .productDescriptionDiv{
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.productImage{
+    height: 120px;
+    width: 120px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.productCard.is-selected:hover .productImage{
+    transform: scale(1.3);
+}
+
+.productName{
+    grid-column: 2/5;
+    grid-row: 1/3;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.productPrice{
+    grid-column: 2/5;
+    grid-row: 4/5;
+    text-align: center;
+}
+
+.productButton{
+    grid-row: 4/5;
+    grid-column: 1/5;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display:none;
+    transition: 0.5s ease-in-out;
+}
+
+.productCard.is-selected:hover .productDescriptionDiv{
+    grid-row: 1/4;
+    overflow: hidden;
+}
+
+.productCard.is-selected:hover .productName{
+    grid-row: 2/3;
+}
+
+.productCard.is-selected:hover .productPrice{
+    grid-row: 3/4;
+}
+
+.productCard.is-selected:hover .productButton, .productCard.is-selected:hover .wishList{
+    display: inline-grid;
+}
+
+.cart, .buyNow{
+    grid-column: 1/2;
+    background-color: #3F51B5;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.buyNow{
+    grid-column: 2/3;
+    background-color: #8B008B;
+}
+
+.cartText, .buyText{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.productCard.is-selected .cart:hover,.productCard.is-selected .buyNow:hover, .productCard.is-selected .wishList:hover{
+    box-shadow: 0px 16px 22px 2px rgba(51, 51, 51, 0.425); 
+}
+
+  
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+  
+.tooltip .tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
+.latestNews{
+    grid-column: 3/4;
+    grid-row: 2/4;
+    background-color: orange;
+}
+

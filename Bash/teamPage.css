@@ -1,0 +1,104 @@
+.teamsTable{
+    background-color: whitesmoke;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.teamCard{
+    border-radius: 20px;
+    width: 20%;
+    height: 60%;
+    text-align: center;
+    color: white;
+}
+
+.teamCard:hover {
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+	transition: 0.1s;
+	opacity: 0.9;
+	cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.teamCard .teamCardImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 250px;
+}
+
+.teamCard:hover .teamCardImg{
+    transform: scale(1.2);
+} 
+
+.teamCard a, .teamCard a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.teamCardAward{
+    color:#FFD700;
+    font-size:110%;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+.teamCSK{
+    background-color: #ffa600f5;
+}
+.teamCardAwardCSK{
+    background-color: #CC6600;
+}
+
+.teamDC{
+    background-color: #0000cd;
+}
+.teamCardAwardKKR{
+    background-color: #010196;
+}
+
+.teamKXIP{
+    background-color: #ad0000;
+}
+.teamCardAwardKKR{
+    background-color: #8b0000;
+}
+
+.teamKKR{
+    background-color: #380061;
+}
+.teamCardAwardKKR{
+    background-color: #4b0082;
+}
+
+.teamMI{
+    background-color: #44a5ff;
+}
+.teamCardAwardMI{
+    background-color: #0082fc;
+}
+
+.teamRR{
+    background-color: #006dd3;
+}
+.teamCardAwardRR{
+    background-color: #004b92;
+}
+
+.teamRCB{
+    background-color: #252525;
+}
+.teamCardAwardRCB{
+    background-color: #000000;
+}
+
+.teamSH{
+    background-color: #eb372e;
+}
+.teamCardAwardSH{
+    background-color: #b90900;
+}

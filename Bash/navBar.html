@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<link rel="stylesheet" type="text/css" href="navBar.css">
+		<script src="navBar.js"></script>
+	</head>
+	<body>
+		<div class="navBar">
+			<ul class="navLink">
+				<li class="navBarLogo"><a class="logo" href="https://www.iplt20.com/"></a></li>
+				<li class="navLinky"><a class="activeSite fa fa-home" href="HomePage.php"> Home</a></li>
+				<li class="navLinky"><a class="fa fas fa-tshirt" href="teamPage.php"> Teams</a></li>
+				<li class="navLinky"><a class="fa fa-calendar" href="schedule.php"> Schedule</a></li>
+				<li class="navLinky"><a class="fa fa-image" href="gallery.php"> Gallery</a></li>
+				<li class="navLinky">
+					<div class="dropdown">
+						<button class="dropbtn fa fa-th"> Category
+							<span class="fa fa-caret-down"></span>
+						</button>
+						<div>
+							<ul class="dropdown-content">
+								<li class="dropdown-content-link"><a class="fas fa-tshirt" href="storePage.php"> Jersey</a></li>
+								<li class="dropdown-content-link"><a href="storePage.php"><span class="batIcon"> </span> Bat</a></li>
+								<li class="dropdown-content-link"><a class="fas fa-baseball-ball" href="storePage.php"> Ball</a></li>
+								<li class="dropdown-content-link"><a class="fas fa-shoe-prints" href="storePage.php"> Shoes</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="navLinky" style="float: right;"><a class="fas fa-store" id="storeBtn" href="storePage.php"> Store</a></li>
+				<li class="navLinky" style="float: right;">
+					<div class="dropdown">
+						<button class="dropbtn fa fa-cog"> Settings
+							<span class="fa fa-caret-down"></span>
+						</button>
+						<div>
+							<ul class="dropdown-content">
+								<li class="dropdown-content-link"><a class="fas fa-user" href="profile.php"> Profile</a></li>
+								<li class="dropdown-content-link"><a class="fas fa-heart" href="#"> WishList</a></li>
+								<li class="dropdown-content-link"><a class="fas fa-power-off" href="payment_form.php"> Payment</a></li>
+								<li class="dropdown-content-link"><a class="fas fa-power-off" href="logout.php"> Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+    </body>
+</html>

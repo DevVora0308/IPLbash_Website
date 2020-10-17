@@ -1,0 +1,94 @@
+.slideShowContainer{    /* SlideShow Container */
+    margin: 10px;
+    margin-top: 100px;
+    grid-column: 1 / 4;
+}
+
+.slides{    /* Hides the image by default */
+    display: none;
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+.imgSlide{
+    vertical-align: middle;
+    height: 500px;
+    transition: transform 0.9s ease;
+}
+
+.imgSlide:hover{
+    transform: scale(1.2);
+}
+
+.prev, .next{    /* Next and Previous Buttons */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next{    /* Position the next button to the right */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: grey;
+}
+
+/* Caption text */
+.imgCaption {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot{    /* the dots/bullets/indicators */
+    cursor: pointer;
+    height: 15px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideShowDot{
+    grid-column: 1/4;
+    width: inherit;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+}
+
+.activeSlide, .dot:hover{
+    background-color: #717171;
+}
+
+.activeSlide{
+    background-color: navy;
+}
+
+.fade{    /* Fading Animation */
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from {opacity: 0.4}
+    to {opacity: 1.0}
+}
