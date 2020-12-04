@@ -1,0 +1,130 @@
+* {
+	box-sizing:border-box;
+}
+
+body{
+    margin: 10px auto;
+    background-color: rgba(0, 0, 128, 1.0);
+}
+
+.navBarr{
+    width: inherit;
+}
+
+.mainContainer{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 50px;
+    width: inherit;
+    min-width: 1200px;
+    max-width: 1500px;
+}
+
+.pageHeader, .productContainer{
+    grid-row: 1/2;
+    background-color: orangered;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.pageHeader{
+    margin-top: 30px;
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 50px;
+    background-color: inherit;
+}
+
+.productContainer{
+    grid-row: 2/3;
+    min-width: 1100px;
+    min-height: 500px;
+}
+
+.productMainContainer{
+    background-color: orange;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: inherit;
+    color: navy;
+    text-align: left;
+    font-size: 20px;
+}
+
+label{
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: large;
+}
+
+::placeholder {
+    color: navy;
+    font-weight: 500;
+    font-size: medium;
+}
+
+input, textarea{
+    border: 2px groove navy;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bolder;
+    color: navy;
+    text-align: center;
+    padding:5px;
+    width: auto;
+    font-size: medium;
+}
+
+.address{
+    position: relative;
+    top: -25px;
+    font-size: medium;
+}
+
+input:focus, input:focus::placeholder, textarea:focus, textarea:focus::placeholder {
+    background-color: navy;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+input[disabled], input[readonly] {
+    background-color: navy;
+    color: orange;
+    font-size: medium;
+}
+
+.button{
+    position: relative;
+    color: aliceblue;
+    background-color: navy;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    top: 15px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.success{
+    color: green;
+    background-color: navy; 
+    padding: 10px;
+};
+
+.error{
+    color: red;
+}
+
+.userTables .itemImage{
+    height: 100px;
+    width: 100px;
+}
+

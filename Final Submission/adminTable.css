@@ -1,0 +1,141 @@
+.tabLink, .tabLink2 {
+    background-color: navy;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 33.33%;
+    font-weight: bold;
+}
+
+.tabLink2{
+    width: 25%;
+    min-height: 80px;
+}
+  
+.tabLink:hover {
+    background-color: rgb(40, 40, 139);
+}
+
+.tabContent {
+    color: navy;
+    display: none;
+    min-height: 500px;
+    height: 100%;
+    padding-top: 10px;
+}
+  
+
+.activeTabContent {
+    background-color: orange;
+}
+
+.userTables {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 100px auto;
+    min-width: 1200px;
+}
+
+.userTables td, .userTables th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.userTables th {
+    font-weight: bolder;
+    font-size: medium;
+}
+
+.userTables tr:nth-child(even){
+    background-color: rgba(255, 68, 0, 0.61);
+}
+
+.userTables tr:nth-child(odd){
+    background-color: rgba(255, 68, 0, 0.61);
+}
+
+.userTables tr:hover {
+    background-color: orangered;
+}
+
+.userTables td .deleteBtn, .userTables td .editBtn{
+    margin: 5px;
+    background-color: red;
+    color: navy;
+    padding: 3px;
+    font-size: 20px;
+    border: 1px groove navy;
+    border-radius: 10px;
+}
+
+.userTables th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: navy;
+    color: white;
+}
+
+.userTables tr:hover .deleteBtn{
+    background-color: white;
+    color: red;
+}
+
+.userTables tr:hover .editBtn  {
+    background-color: white;
+    color: navy;
+}
+
+.deleteBtn a:link, .deleteBtn a:visited, .deleteBtn a:link, .editBtn a:link, .editBtn a:visited, .editBtn a:link{
+    color: inherit;
+}
+
+.userTables tr .editBtn:hover  {
+    background: green;
+    color: white;
+}
+
+.userTables tr .deleteBtn:hover  {
+    background: red;
+    color: white;
+}
+
+.userTables .itemDescription{
+    min-width: 200px;
+}
+.userTables .srNo, .userTables .id{
+    min-width: 50px;
+}
+
+.userTables .name{
+    min-width: 80px;
+}
+
+.userTables .price{
+    min-width: 100px;
+}
+
+.userTables .itemImage{
+    height: 120px;
+    width: 120px;
+}
+
+.userTables .itemDescription{
+    max-width: 100px;
+}
+
+.userTables .timeStamp, .userTables .userId{
+    word-wrap: break-word;
+    max-width: 100px;
+}
+
+.userTables .author{
+    min-width: 120px;
+}

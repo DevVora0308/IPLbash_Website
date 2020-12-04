@@ -1,0 +1,83 @@
+* {box-sizing:border-box}
+
+body{
+    margin: 10px auto;
+    background-color: rgba(0, 0, 128, 1.0);
+}
+
+.navBarr{
+    width: inherit;
+}
+
+.mainContainer{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 50px;
+    width: inherit;
+    min-width: 1200px;
+    max-width: 1500px;
+}
+
+.button{
+    position: relative;
+    color: aliceblue;
+    background-color: navy;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pageHeader, .productContainer{
+    grid-row: 1/2;
+    background-color: orangered;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.pageHeader{
+    margin-top: 30px;
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 50px;
+    background-color: inherit;
+}
+
+.productContainer{
+    grid-row: 2/3;
+    min-width: 1300px;
+    min-height: 500px;
+}
+
+.content label, select {
+    background-color: transparent;
+    font-weight: bold;
+    color: navy;
+    text-align: center;
+    padding:5px;
+}
+
+.category::after{
+    background-color: aliceblue;
+    color: navy;
+    border-radius: 10px;
+}
+
+select{
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.productMainContainer{
+    background-color: orange;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: inherit;
+}
