@@ -64,7 +64,7 @@ div {
         if($userType=="User")
         {
             mysqli_close($conn);
-            header('Location: teamPage.php');
+            header('Location: HomePage.php');
         }
         else if($userType=="Admin")
         {
