@@ -1,4 +1,4 @@
-* {box-sizing:border-box}
+* {box-sizing:border-box;}
 
 body{
     margin: 10px auto;
@@ -7,13 +7,16 @@ body{
 
 .mainContainer{
     display: grid;
-    margin: 0px 10px;
+    margin: 10px auto;
     grid-template-columns: auto auto auto;
-    grid-gap: 50px;
+    grid-gap: 25px;
 }
 
 .matchHistory, .productList, .latestNews{
-    grid-column: 1/3;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-row: 1/2;
+    grid-column: 1/2;
     background-color: orangered;
     padding: 20px;
     border-radius: 20px;
@@ -27,7 +30,7 @@ body{
     font-weight: bolder;
 }
 
-.prevMatch, .productCard{
+.prevMatch, .productCard, .news{
     width: 40%;
     counter-increment: prevMatch;
     background: orange;
@@ -35,7 +38,7 @@ body{
     border-radius: 20px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
+    grid-gap: 5px;
     padding: 10px;
     text-align: center;
     justify-content: center;
@@ -43,24 +46,31 @@ body{
     align-content: center;
     color: navy;
     font-size: 18px;
-    filter: blur(3px);
 }
 
-.prevMatch.is-selected, .productCard.is-selected{
+.prevMatch, .news{
+    height: 300px;
+}
+
+.prevMatch.is-selected, .productCard.is-selected, .news.is-selected{
     background: whitesmoke;
     filter: blur(0px);
 }
 
 /* cell number */
-.prevMatch:before, .productCard:before{
+.prevMatch:before, .productCard:before, .news:before{
     display: block;
     text-align: center;
     font-size: 80px;
     color: orangered;
+    visibility: visible;
 }
 
 .flickity-prev-next-button{
     top: 50%;
+    background-color: orange;
+    border: 1px groove navy;
+    color: navy;
 }
 
 .flickity-prev-next-button.previous{
@@ -69,9 +79,23 @@ body{
     margin: -50px 0px 0px;
 }
 
+.flickity-prev-next-button.previous:hover{
+    background-color: orangered;
+    border: 1px groove navy;
+    color: navy;
+    opacity: 1;
+}
+
 .flickity-prev-next-button.next {
     top: 72%;
     border-radius: 50%;
+}
+
+.flickity-prev-next-button.next:hover{
+    background-color: orangered;
+    border: 1px groove navy;
+    color: navy;
+    opacity: 1;
 }
 
 .flickity-page-dots{
@@ -79,8 +103,9 @@ body{
 }
 
 .teamNo{
-    grid-column: 1/2;
+    grid-column: 1/4;
     padding: 5px;
+    text-align: center;
 }
 
 .matchDate{
@@ -107,7 +132,7 @@ body{
     align-content: center;
 }
 
-.team1 teamLogo, .team1 teamName, .team1 score{
+.team1 .teamLogo, .team1 .teamName, .team1 .score{
     display: inline;
     grid-column: 1/2;
     text-align: center;
@@ -120,7 +145,7 @@ body{
     font-weight: bold;
 }
 
-.team2 teamLogo, .team2 teamName, .team2 score{
+.team2 .teamLogo, .team2 .teamName, .team2 .score{
     display: inline;
     grid-column: 3/4;
     text-align: center;
@@ -154,8 +179,69 @@ body{
     padding: 5px;
 }
 
+.news{
+    counter-increment: news;
+    background-color: orangered;
+    width: 500px;
+}
+
+.newsHeadline, .newsAuthor{
+    grid-column: 1/2;
+    padding: 5px;
+    max-width: 300px;
+    width: max-content;
+}
+.newsAuthor::before{
+    content: "Author: ";
+}
+.newsAuthor{
+    grid-column: 3/4;
+    max-width: 150px;
+}
+/* width */
+.newsContent::-webkit-scrollbar {
+    width: 20px;
+}
+  
+  /* Track */
+.newsContent::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+  /* Handle */
+.newsContent::-webkit-scrollbar-thumb {
+    background: orangered; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.newsContent::-webkit-scrollbar-thumb:hover {
+    background: rgb(187, 51, 2); 
+}
+
+.newsContent{
+    grid-column: 1/4;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 5px;
+    word-wrap: break-word;
+    max-height: 150px;
+}
+
+.news.is-selected .newsContent{
+    overflow-y: scroll;
+}
+
+.latestNews{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    background-color: orange;
+}
+
 .productList{
-    grid-column: 1/3;
+    grid-column: 1/4;
+    grid-row: 2/3;
     background-color: orangered;
     padding: 20px;
     border-radius: 20px;
@@ -166,6 +252,8 @@ body{
     margin: 0 auto;
     background-color: orangered;
     border-radius: 10px;
+    height: 300px;
+    padding-bottom: 10px;
 }
 
 .productCard{
@@ -174,9 +262,10 @@ body{
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     background-color: whitesmoke;
-    height: 200px;
     width: 30%;
+    height: 300px;
     transition: 0.5s ease-in-out;
+    grid-gap: 25px;
 }
 
 .productCard.is-selected{
@@ -190,19 +279,25 @@ body{
     background-color: whitesmoke;
     overflow: hidden;
     transition: 0.5s ease-in-out;
+    width: 300px;
 }
 
 .wishList{
+    position: relative;
     grid-column: 4/5;
     grid-row: 1/2;
     display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 1px groove whitesmoke; 
     border-radius: 50%;
     color: red;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    top: 20px;
 }
 
 .wishList > .fa{
@@ -210,20 +305,20 @@ body{
     padding: 6px;
 }
 
-.productCard.is-selected:hover .productDescriptionDiv{
+.productCard:hover .productDescriptionDiv{
     background-color: rgba(0, 0, 0, 0.2);
     overflow: hidden;
     border-radius: 50px;
 }
 
 .productImage{
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
     transition: 0.5s ease-in-out;
     overflow: hidden;
 }
 
-.productCard.is-selected:hover .productImage{
+.productCard:hover .productImage{
     transform: scale(1.3);
 }
 
@@ -233,9 +328,11 @@ body{
     justify-content: center;
     align-content: center;
     text-align: center;
+    display: inline;
 }
 
 .productPrice{
+    display: inline;
     grid-column: 2/5;
     grid-row: 4/5;
     text-align: center;
@@ -246,7 +343,7 @@ body{
     grid-column: 1/5;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 10px;
+    grid-gap: 50px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -255,31 +352,35 @@ body{
     transition: 0.5s ease-in-out;
 }
 
-.productCard.is-selected:hover .productDescriptionDiv{
+.productCard:hover .productDescriptionDiv{
     grid-row: 1/4;
     overflow: hidden;
 }
 
-.productCard.is-selected:hover .productName{
+.productCard:hover .productName{
     grid-row: 2/3;
 }
 
-.productCard.is-selected:hover .productPrice{
+.productCard:hover .productPrice{
     grid-row: 3/4;
 }
 
-.productCard.is-selected:hover .productButton, .productCard.is-selected:hover .wishList{
+.productCard:hover .productButton, .productCard:hover .wishList{
     display: inline-grid;
 }
 
-.cart, .buyNow{
-    grid-column: 1/2;
+.cart{
+    grid-column: 1/4;
     background-color: #3F51B5;
     color: white;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    padding: 10px;
+    margin: 0px auto;
+    width: 150px;
+    height: 50px;
+    padding-top: 15px;
+    border: 2px groove whitesmoke;
 }
 
 .buyNow{
@@ -292,13 +393,18 @@ body{
     font-weight: normal;
 }
 
-.productCard.is-selected .cart:hover,.productCard.is-selected .buyNow:hover, .productCard.is-selected .wishList:hover{
-    box-shadow: 0px 16px 22px 2px rgba(51, 51, 51, 0.425); 
+.productCard .cart:hover,.productCard .buyNow:hover, .productCard .wishList:hover{
+    box-shadow: 0px 20px 20px 10px rgba(51, 51, 51, 0.6);
 }
 
+.cartText, .buyText{
+    font-size: 18px;
+    font-weight: normal;
+}
   
 .tooltip .tooltipText {
     visibility: hidden;
+    overflow: visible;
     width: 120px;
     background-color: black;
     color: #fff;
@@ -307,9 +413,10 @@ body{
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
+    bottom: 90%;
+    left: 80%;
+    margin-left: -70px;
+    overflow: visible;
 }
   
 .tooltip .tooltipText::after {
@@ -326,10 +433,6 @@ body{
 .tooltip:hover .tooltipText {
     visibility: visible;
 }
-
-.latestNews{
-    grid-column: 3/4;
-    grid-row: 2/4;
-    background-color: orange;
+.footer{
+    width: 125.5%;
 }
-

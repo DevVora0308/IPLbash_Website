@@ -3,13 +3,13 @@ function myFunction() {
 }
 
 function solidHeart(x) {
-    x.classList.remove("fa-heart-o");
-    x.classList.add("fa-heart");
+    x.classList.remove("far fa--heart");
+    x.classList.add("fas fa-heart");
 }
   
 function borderHeart(x) {
-    x.classList.remove("fa-heart");
-    x.classList.add("fa-heart-o");
+    x.classList.remove("fas fa-heart");
+    x.classList.add("far fa--heart");
 }
 
 function cartPlus(x) {

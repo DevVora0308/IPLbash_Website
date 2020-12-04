@@ -1,3 +1,10 @@
+* {box-sizing:border-box;}
+
+body{
+    margin: 10px auto;
+    background-color: navy;
+}
+
 .teamsTable{
     background-color: whitesmoke;
     width: 100%;

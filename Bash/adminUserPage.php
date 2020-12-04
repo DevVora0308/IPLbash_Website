@@ -1,5 +1,11 @@
 <?php
     session_start();
+    if(isset($_GET['open'])) {
+        include 'adminModal.php';
+        echo "<script>onclick='document.getElementById('modal').style.display='block''<script>";
+        $userEmailId = $_GET['id'];
+    }
+
 ?><!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,14 +21,6 @@
 		<title>IPLBash HomePage</title>
     </head>
 	<body onload="openDefaultTab()">      
-
-        <!-- <div id='myModal' class='modal'>
-            <div class='modal-content'>
-                <span class='close'>&times;</span>
-                <p><?php echo $message ?></p>
-            </div>
-        </div> -->
-
         <div class="navBarr">
             <?php
                 include 'adminSideBar.php';
@@ -74,8 +72,6 @@
                                     $userEmailId = $row['mail'];
                                     $userAddress = $row['address'];
                                     $userFavTeam = $row['favteam'];
-                                    $_POST['emailId'] = $userEmailId;
-                                    $_SESSION['data'] = $_POST; 
                         ?>
                         <tr>
                             <td><?php echo $userNo; ?></td>
@@ -88,7 +84,7 @@
                             <td><?php echo $userFavTeam; ?></td>
                             <td>
                                 <div class="deleteBtn" id="openModal">
-                                    <a href="deleteUser.php?id=<?php echo $userEmailId; ?>">
+                                    <a href="adminModal.php?open=true&id=<?php echo $userEmailId; ?>">
                                        <script>console.log('Deleted id '.$emailId);</script>
                                         <i class="fa fa-trash"></i>
                                     </a>
@@ -136,8 +132,6 @@
                                     $userEmailId = $row['mail'];
                                     $userAddress = $row['address'];
                                     $userFavTeam = $row['favteam'];
-                                    $_POST['emailId'] = $userEmailId;
-                                    $_SESSION['data'] = $_POST; 
                         ?>
                         <tr>
                             <td><?php echo $userNo; ?></td>
@@ -150,7 +144,7 @@
                             <td><?php echo $userFavTeam; ?></td>
                             <td>
                                 <div class="deleteBtn" id="openModal">
-                                    <a href="deleteUser.php?id=<?php echo $userEmailId; ?>">
+                                    <a href="adminModal.php?open=true&id=<?php echo $userEmailId; ?>">
                                        <script>console.log('Deleted id '.$emailId);</script>
                                         <i class="fa fa-trash"></i>
                                     </a>
@@ -198,8 +192,6 @@
                                     $userEmailId = $row['mail'];
                                     $userAddress = $row['address'];
                                     $userFavTeam = $row['favteam'];
-                                    $_POST['emailId'] = $userEmailId;
-                                    $_SESSION['data'] = $_POST; 
                         ?>
                         <tr>
                             <td><?php echo $userNo; ?></td>
@@ -212,7 +204,7 @@
                             <td><?php echo $userFavTeam; ?></td>
                             <td>
                                 <div class="deleteBtn" id="openModal">
-                                    <a href="deleteUser.php?id=<?php echo $userEmailId; ?>">
+                                    <a href="adminModal.php?open=true&id=<?php echo $userEmailId; ?>">
                                        <script>console.log('Deleted id '.$emailId);</script>
                                         <i class="fa fa-trash"></i>
                                     </a>
